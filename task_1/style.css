@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: rgb(153, 131, 238);
+    padding: 30px 15px;
+    transition: 0.3s;
+}
+.card{
+    height: auto;
+    width: 650px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    margin: auto;
+    padding: 30px;
+}
+.header{
+    text-align: center;
+    padding-bottom: 10px;
+}
+.header h1{
+    color:  rgb(153, 131, 238);
+    margin: 10px 0;
+}
+.header h3{
+    color: gray;
+    margin-bottom: 15px;
+}
+img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin: auto;
+}
+.intro {
+    line-height: 1.6;
+    max-width: 480px;
+    margin: auto;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 11px 20px;
+    margin: 5px;
+    background:  rgb(164, 105, 220);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: blueviolet;
+    color: white;
+    transform: translateY(-3px);
+}
+.outline {
+    background: transparent;
+    color: blueviolet;
+    border: 2px solid  rgb(164, 105, 220);
+}
+h2{
+    color:rgb(153, 131, 238);
+    margin-bottom: 15px;
+    border-left: 4px solid rgb(158, 74, 236);
+    padding-left: 10px;
+    margin-top: 15px;
+}
+.skill_name {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill_name span {
+    background: rgb(235, 231, 241);
+    color: rgb(132, 11, 246);
+    padding: 9px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+.project {
+    background: #f7f5fb;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    border-left: 4px solid rgb(158, 74, 236);
+    transition: 0.3s;
+}
+
+.project:hover {
+    transform: translateX(5px);
+}
+
+.project h3 {
+    margin-bottom: 8px;
+    color: blueviolet;
+}
+.social {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.social a {
+    color: blueviolet;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social a:hover {
+    text-decoration: underline;
+}
+footer {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+    color: #777;
+}
