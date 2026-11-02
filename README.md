@@ -9,7 +9,6 @@ The purpose of this repository is to track my learning progress, improve my fron
 - HTML5
 - CSS3
 - JavaScript
-- React.js
 
 ## Daily Tasks
 
