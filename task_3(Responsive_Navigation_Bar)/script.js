@@ -1,31 +1,40 @@
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
+
+function closeMenu(){
+    navLinks.classList.remove("active");
+    menuToggle.textContent = "☰";
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute(
+        "aria-label",
+        "Open navigation menu"
+    );
+}
 menuToggle.addEventListener("click", function(){
-    navLinks.classList.toggle("active");
-    if(navLinks.classList.contains("active")){
-        menuToggle.innerHTML = "✕";
+    const isOpen = navLinks.classList.toggle("active");
+    if(isOpen){
+        menuToggle.textContent = "✕";
         menuToggle.setAttribute("aria-expanded", "true");
-        menuToggle.setAttribute("aria-label", "Close navigation menu");
+        menuToggle.setAttribute(
+            "aria-label",
+            "Close navigation menu"
+        );
     }else{
-        menuToggle.innerHTML = "☰";
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Open navigation menu");
+        closeMenu();
     }
+
 });
 const links = document.querySelectorAll(".nav-links a");
-links.forEach(function(link){
+
+links.forEach(function (link){
     link.addEventListener("click", function(){
-        navLinks.classList.remove("active");
-        menuToggle.innerHTML = "☰";
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Open navigation menu");
+        closeMenu();
     });
 });
-document.addEventListener("keydown", function(event){
-    if(event.key === "Escape"){
-        navLinks.classList.remove("active");
-        menuToggle.innerHTML = "☰";
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Open navigation menu");
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" &&
+        navLinks.classList.contains("active")) {
+        closeMenu();
+        menuToggle.focus();
     }
 });

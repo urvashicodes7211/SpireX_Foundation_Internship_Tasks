@@ -3,9 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* html{
+html{
     scroll-behavior: smooth;
-} */
+}
 body{
     font-family: Arial, sans-serif;
 }
@@ -22,6 +22,8 @@ nav{
     align-items: center;
     justify-content: space-between;
     padding: 0 50px;
+    position: relative;
+    z-index: 100;
 }
 nav p{
     color: white;
@@ -66,7 +68,8 @@ nav a:hover{
     padding: 15px 30px;
     font-size: 18px;
     border-radius: 30px;
-    transition: 0.3s;
+    display: inline-block;
+    transition: all 0.3s ease;
 }
 .buttons a:first-child{
     background-color: #00d4ff;
@@ -150,5 +153,21 @@ button:focus-visible{
     }
     .buttons a{
         text-align: center;
+    }
+}
+::selection{
+    background-color: #00d4ff;
+    color: #1c1e3d;
+}
+.buttons a:active{
+    transform: scale(0.95);
+}
+@media (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto;
+    }
+    *,*::before,*::after{
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
     }
 }
