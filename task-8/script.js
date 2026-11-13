@@ -25,25 +25,33 @@ function addExpense(){
 function displayExpenses(){
     let expenseList = document.getElementById("expenseList");
     expenseList.innerHTML = "";
+
     expenses.forEach(function(expense){
         let li = document.createElement("li");
         let info = document.createElement("div");
         info.className = "expense-info";
+
         let name = document.createElement("strong");
         name.textContent = expense.name;
+
         let amount = document.createElement("p");
         amount.textContent = "₹" + expense.amount.toFixed(2);
+
         let date = document.createElement("small");
         date.textContent = expense.date;
+
         info.appendChild(name);
         info.appendChild(amount);
         info.appendChild(date);
+
         let deleteBtn = document.createElement("button");
         deleteBtn.textContent = "Delete";
         deleteBtn.className = "delete-btn";
+
         deleteBtn.onclick = function(){
             deleteExpense(expense.id);
         };
+        
         li.appendChild(info);
         li.appendChild(deleteBtn);
         expenseList.appendChild(li);
