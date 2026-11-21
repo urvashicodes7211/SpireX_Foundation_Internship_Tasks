@@ -46,7 +46,7 @@ header{
     padding: 12px 22px;
     border-radius: 6px;
     text-decoration: none;
-
+} 
 .hero{
     display: flex;
     align-items: center;
@@ -251,5 +251,4 @@ footer {
     form textarea,form button {
         grid-column: span 1;
     }
-}
 }
