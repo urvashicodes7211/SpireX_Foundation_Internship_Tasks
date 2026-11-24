@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h2>Job<span>Finder</span></h2>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#jobs">Find Jobs</a>
+        <a href="#about">About</a>
+    </nav>
+    <button class="post-btn">Post a Job</button>
+</header>
+<section class="hero">
+    <h1>Find Your Dream Job Today!</h1>
+    <p>Discover thousands of job opportunities from top companies.</p>
+    <div class="search-box">
+        <input type="text" id="searchInput"
+            placeholder="Search job title or company">
+        <select id="categoryFilter">
+            <option value="">All Categories</option>
+            <option value="Frontend">Frontend</option>
+            <option value="Backend">Backend</option>
+            <option value="Python">Python</option>
+            <option value="UI/UX">UI/UX</option>
+        </select>
+        <select id="locationFilter">
+            <option value="">All Locations</option>
+            <option value="Remote">Remote</option>
+            <option value="Rajkot">Rajkot</option>
+            <option value="Ahmedabad">Ahmedabad</option>
+        </select>
+        <button onclick="filterJobs()">Search</button>
+    </div>
+</section>
+<section class="jobs" id="jobs">
+    <h2>Latest Job Opportunities</h2>
+    <p class="subtitle">Explore jobs that match your skills.</p>
+    <div id="jobContainer" class="job-container"></div>
+</section>
+<div id="jobModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="jobDetails"></div>
+    </div>
+</div>
+<footer id="about">
+    <h2>JobFinder</h2>
+    <p>Connecting talented people with great opportunities.</p>
+    <p>© 2026 JobFinder. All Rights Reserved.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
