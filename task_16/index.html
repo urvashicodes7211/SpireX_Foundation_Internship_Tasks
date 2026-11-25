@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TastyBite | Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <h2><i class="fa-solid fa-utensils"></i> TastyBite</h2>
+
+        <div class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#services">Services</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <a href="#booking" class="btn">Book Table</a>
+        <i class="fa-solid fa-bars menu-icon" id="menuIcon"></i>
+    </nav>
+</header>
+
+<!-- Home -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <p class="tagline">WELCOME TO TASTYBITE</p>
+        <h1>Enjoy Delicious Food<br>With Your Loved Ones</h1>
+        <p>Fresh ingredients, amazing flavors and unforgettable dining experiences.</p>
+        <a href="#menu" class="btn">Explore Menu</a>
+        <a href="#booking" class="btn btn-outline">Book a Table</a>
+    </div>
+</section>
+
+<!-- About -->
+<section class="about section" id="about">
+    <div class="about-image"></div>
+
+    <div class="about-content">
+        <p class="tagline">ABOUT OUR RESTAURANT</p>
+        <h2>We Serve Delicious Food Every Day</h2>
+        <p>
+            Welcome to TastyBite, where every dish is prepared
+            with fresh ingredients and passion. We believe in
+            serving quality food with excellent hospitality.
+        </p>
+        <a href="#menu" class="btn">Discover More</a>
+    </div>
+</section>
+
+<!-- Menu -->
+<section class="section menu-section" id="menu">
+    <div class="heading">
+        <p class="tagline">OUR SPECIAL MENU</p>
+        <h2>Popular Dishes</h2>
+    </div>
+
+    <div class="menu-filters">
+        <button class="filter active" data-category="all">All</button>
+        <button class="filter" data-category="pizza">Pizza</button>
+        <button class="filter" data-category="burger">Burger</button>
+        <button class="filter" data-category="dessert">Dessert</button>
+    </div>
+
+    <div class="menu-container" id="menuContainer"></div>
+</section>
+
+<!-- Services -->
+<section class="section services" id="services">
+    <div class="heading">
+        <p class="tagline">WHAT WE OFFER</p>
+        <h2>Our Services</h2>
+    </div>
+
+    <div class="service-container">
+        <div class="service-card">
+            <i class="fa-solid fa-utensils"></i>
+            <h3>Quality Food</h3>
+            <p>Fresh and delicious meals prepared by expert chefs.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fa-solid fa-truck-fast"></i>
+            <h3>Fast Delivery</h3>
+            <p>Get your favorite food delivered to your doorstep.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fa-solid fa-calendar-check"></i>
+            <h3>Table Booking</h3>
+            <p>Reserve your table easily for a wonderful experience.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery -->
+<section class="section" id="gallery">
+    <div class="heading">
+        <p class="tagline">OUR FOOD GALLERY</p>
+        <h2>Discover Our Dishes</h2>
+    </div>
+
+    <div class="gallery-container">
+        <img src="https://i.pinimg.com/736x/79/c7/3b/79c73b69d1a406c39366631710abbf57.jpg" alt="Food">
+        <img src="https://i.pinimg.com/736x/11/ed/59/11ed59f90b289c80d853c81468c3e7be.jpg" alt="Burger">
+        <img src="https://i.pinimg.com/736x/84/7c/d2/847cd2207dd11dfcaf4e52500186d5d9.jpg" alt="Pizza">
+        <img src="https://i.pinimg.com/736x/37/1d/64/371d6431a1f456c0ae15d39f91b7ee2a.jpg" alt="Dessert">
+    </div>
+</section>
+
+<!-- Booking -->
+<section class="section booking" id="booking">
+    <div class="heading">
+        <p class="tagline">RESERVE YOUR TABLE</p>
+        <h2>Book Your Table Now</h2>
+    </div>
+
+    <form id="bookingForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+        <input type="date" id="date" required>
+        <input type="time" id="time" required>
+
+        <select id="guests" required>
+            <option value="">Number of Guests</option>
+            <option>1 Person</option>
+            <option>2 People</option>
+            <option>3 People</option>
+            <option>4 People</option>
+            <option>5+ People</option>
+        </select>
+
+        <textarea id="message" placeholder="Special Request"></textarea>
+
+        <button type="submit" class="btn">Confirm Booking</button>
+    </form>
+
+    <p id="bookingMessage"></p>
+</section>
+
+<!-- Contact -->
+<section class="section contact" id="contact">
+    <div class="heading">
+        <p class="tagline">GET IN TOUCH</p>
+        <h2>Contact Us</h2>
+    </div>
+
+    <div class="contact-container">
+        <div>
+            <i class="fa-solid fa-location-dot"></i>
+            <h3>Address</h3>
+            <p>Rajkot, Gujarat, India</p>
+        </div>
+
+        <div>
+            <i class="fa-solid fa-phone"></i>
+            <h3>Phone</h3>
+            <p>+91 98765 43210</p>
+        </div>
+
+        <div>
+            <i class="fa-solid fa-envelope"></i>
+            <h3>Email</h3>
+            <p>info@tastybite.com</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <h2>TastyBite</h2>
+    <p>Delicious Food, Happy Moments!</p>
+    <div class="social">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+    </div>
+    <p>© 2026 TastyBite. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
